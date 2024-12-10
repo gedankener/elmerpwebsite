@@ -483,11 +483,51 @@
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
-            <form>
+            <form id="contactForm">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
                 <input type="text" placeholder="Company Name">
+                <input type="tel" placeholder="Phone Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
                 <textarea placeholder="Your Message" rows="5" required></textarea>
+                
+                <div class="consent-section" style="margin-bottom: 1rem; font-size: 0.9rem;">
+                    <div class="terms-box" style="max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; background-color: #f9f9f9; border-radius: 5px;">
+                        <h4 style="margin-top: 0;">SMS Terms and Conditions</h4>
+                        <p>By providing your phone number and checking the consent box below, you agree to receive SMS messages from Elm Technologies regarding:</p>
+                        <ul style="margin-bottom: 1rem;">
+                            <li>Updates about your inquiry</li>
+                            <li>Promotional offers and marketing messages</li>
+                            <li>Service notifications</li>
+                        </ul>
+                        <p>You understand and agree that:</p>
+                        <ul style="margin-bottom: 1rem;">
+                            <li>Message and data rates may apply</li>
+                            <li>Message frequency varies based on your account activity</li>
+                            <li>You can text STOP to cancel messages at any time</li>
+                            <li>You can text HELP for customer support</li>
+                            <li>Your consent is not required as a condition of purchase</li>
+                            <li>We may use automated dialing systems to deliver messages</li>
+                        </ul>
+                        <p>Your information will be used according to our privacy practices:</p>
+                        <ul>
+                            <li>We collect your phone number and related messaging data</li>
+                            <li>We do not sell your personal information</li>
+                            <li>We maintain industry-standard security measures</li>
+                            <li>We retain messaging records as required by law</li>
+                        </ul>
+                    </div>
+        
+                    <label style="display: flex; align-items: start; gap: 8px; margin-bottom: 1rem;">
+                        <input type="checkbox" required style="margin-top: 4px;">
+                        <span>I have read and agree to the SMS Terms and Conditions above and consent to receive SMS messages from Elm Technologies.</span>
+                    </label>
+                    
+                    <label style="display: flex; align-items: start; gap: 8px;">
+                        <input type="checkbox" required style="margin-top: 4px;">
+                        <span>I confirm that I am the primary user of this phone number and am authorized to provide consent for SMS communications.</span>
+                    </label>
+                </div>
+        
                 <button type="submit">Send Message</button>
             </form>
         </section>
